@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -135,3 +136,9 @@ CRISPY_TEMPLATE_PACK='bootstrap4'
 ###STRIPE SETTINGS###
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51HeIJlJ6fEY3jRXdr9qKdWfhjJu49MOYjctPOyk8DhftArUn3s9TTIsQkORwNUSO9MYJHCI2NjZenCsPEynLWiqh002BBkJRBa'
 STRIPE_SECRET_KEY = 'sk_test_51HeIJlJ6fEY3jRXdRShq2UN2qenMh1jG50bW2Scr6fOmqkWwOAZCYk0hbyEGjsVyTcReYS3e3tWYfX4kRsDNdC3Z00hC1BV2NN'
+
+
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
